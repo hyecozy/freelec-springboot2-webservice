@@ -10,9 +10,9 @@ import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
 @Getter
-@MappedSuperclass //1
-@EntityListeners(AuditingEntityListener.class) //2
-public class BaseTimeEntity {
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+public abstract class BaseTimeEntity {
 
     @CreatedDate
     private LocalDateTime createdDate;
